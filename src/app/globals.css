@@ -42,16 +42,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: #F6FAFB;
+    --background-start-rgb: #F6FAFB;
+    --background-end-rgb: #F6FAFB;
 
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+    --primary-glow: radial-gradient(rgba(189, 189, 189, 0.4), rgba(179, 179, 179, 0));
     --secondary-glow: linear-gradient(
       to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
+      rgba(255, 255, 255, 0),
+      rgba(222, 222, 222, 0),
+      rgba(255, 255, 255, 0.3)
     );
 
     --tile-start-rgb: 2, 13, 46;
@@ -83,6 +83,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: #F6FAFB;
 }
 
 body {

@@ -1,10 +1,21 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  padding: 6rem;
+  padding: 0;
   min-height: 100vh;
+}
+
+.header{
+  background-color: red;
+  color: #1c1c1c;
+  width: 100dvw;
+  position: fixed;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .description {
