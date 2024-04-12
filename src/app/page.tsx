@@ -1,76 +1,43 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "./components/Header";
+import BoxInfo from "./components/BoxInfo";
+import CardSmall from "./components/CardSmall";
+import Table from "./components/Table";
+import Status from "./components/Status";
+import {Box, Grid, GridItem,Button} from '@chakra-ui/react';
 
 export default function Home() {
   return (
     
     <main className={styles.main}>
-      <Header></Header>
+      <Button bg='gray.300' size='md' color='gray.600' marginLeft='4rem'>Volver</Button>
+    
+ 
+      <Box display='flex' flexDirection='column'  w='100%' px='4rem' my='4rem' gap='4rem'>
+     
+        <BoxInfo></BoxInfo>
+        <Grid templateColumns={{ base: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(4, 1fr)' }} gap={4}>
+          <CardSmall title={'N° de solicitud'} value={2002} ></CardSmall>
+          <CardSmall title={'Fecha de muestra'} value={'12/05/2000'} ></CardSmall>
+          <CardSmall title={'Botella'} value={258} ></CardSmall>
+          <CardSmall title={'Botella'} value={4} ></CardSmall>
+          <CardSmall title={'Horas lubricante'} value={64} ></CardSmall>
+          <CardSmall title={'Horas máquina'} value={32} ></CardSmall>
+          <CardSmall title={'Producto'} value={'Kluber Summit'} ></CardSmall>
+          <CardSmall title={'Observaciones'} value={'Sin observaciones'} ></CardSmall>
+        </Grid>
+
+        <Status> </Status>
+
+        <Table title={'Propiedas fisicas - Resultados'}></Table>
+
+        <Table title={'Propiedas fisicas - Resultados'}></Table>
+      </Box>
+      
 
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+     
     </main>
   );
 }
